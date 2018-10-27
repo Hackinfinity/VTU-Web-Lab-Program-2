@@ -1,62 +1,25 @@
-<script>
-function add()
-{
-	const v1 = document.querySelector("#val1").value;
-	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#ans").value = parseFloat(v1)+parseFloat(v2);
-}
-function sub()
-{
-	const v1 = document.querySelector("#val1").value;
-	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#ans").value = v1-v2;
-}
-function mul()
-{
-	const v1 = document.querySelector("#val1").value;
-	const v2 = document.querySelector("#val2").value;
-	document.querySelector("#ans").value = v1*v2;
-}
-function div()
-{
-	const v1 = document.querySelector("#val1").value;
-	const v2 = document.querySelector("#val2").value;
-	if(v2!=0)
-	document.querySelector("#ans").value = v1/v2;
-	else
-	{
-		document.querySelector("#ans").value = 0;
-		alert('Divide by Zero error');
-	}
-}
-function cls()
-{
-	document.querySelector("#val1").value = 0;
-	document.querySelector("#val2").value = 0;
-	document.querySelector("#ans").value = 0;
-}
-</script>
-<table border=10 align=center>
-	<tr>
-		<th colspan=4 style="text-align:center;">Simple Calculator</th>
-	</tr>
-	<tr>
-		<td>Value1</td>
-		<td colspan=3><input type="number" id="val1" value="0"></td>
-	</tr>
-	<tr>
-		<td>Value2</td>
-		<td colspan=3><input type="number" id="val2" value="0"></td>
-	</tr>
-	<tr>
-		<td>Answer</td>
-		<td colspan=2><input type="number" value="0" id="ans" disabled></td>
-		<td><input type="button" value="C / CE" onclick="cls()"></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="Addition" onclick="add()"></td>
-		<td><input type="button" value="Subtraction" onclick="sub()"></td>
-		<td><input type="button" value="Multiplication" onclick="mul()"></td>
-		<td><input type="button" value="Division" onclick="div()"></td>
-	</tr>
-</table>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table of Sqares & Cubes</title>
+</head>
+<body style="text-align: center;">
+	<h1>Table of Sqares & Cubes</h1>
+	<table width="30%" border="1" style="margin: auto; border-collapse: collapse;"> 
+		<thead>
+			<tr>
+				<th>Number</th>
+				<th>Sqare</th>
+				<th>Cube</th>
+			</tr>
+		</thead>
+		<tbody>
+			<script type="text/javascript">
+				for(var i=0; i<=10; i++){
+					document.write("<tr><th>" +i+ "</th><th>" +(i*i)+ "</th><th>" +(i*i*i)+ "</th></tr>");
+				}
+			</script>
+		</tbody>
+	</table>
+</body>
+</html>
